@@ -5,7 +5,7 @@ for device in ["/gpu:0", "/gpu:1"]:
     ## Utilize the TensorFlow device manager
     with tf.device(device):
         x = tf.constant([1,2,3], shape=[1,3])
-        y = tf.constant([1,2,3],shape [3,1])
+        y = tf.constant([1,2,3], shape=[3,1])
         my_list.append(tf.matmul(x, y))
     with tf.device("/cpu:0"):
         sum_operation = tf.add(x,y)
